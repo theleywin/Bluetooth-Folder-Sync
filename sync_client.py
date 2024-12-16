@@ -4,7 +4,7 @@ import socket
 
 def send_file(filepath, peer_mac, port):
     if not os.path.exists(filepath):
-        print("El archivo especificado no existe.")
+        print("El archivo no existe.")
         return
 
     filesize = os.path.getsize(filepath)

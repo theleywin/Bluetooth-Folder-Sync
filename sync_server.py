@@ -44,7 +44,7 @@ def start_server(local_mac, port):
         client_sock.close()
 
 
-class SyncHandler(FileSystemEventHandler):
+class Handler(FileSystemEventHandler):
 
     def on_created(self, event):
         global is_syncing, is_receiving

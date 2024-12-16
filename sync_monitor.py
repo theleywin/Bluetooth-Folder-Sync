@@ -1,11 +1,11 @@
 import time
 from watchdog.observers import Observer
-from sync_server import SyncHandler
+from sync_server import Handler
 from config import SYNC_FOLDER
 
 
-def start_sync_monitor():
-    event_handler = SyncHandler()
+def start_monitor():
+    event_handler = Handler()
     observer = Observer()
     observer.schedule(event_handler, SYNC_FOLDER, recursive=True)
     observer.start()
